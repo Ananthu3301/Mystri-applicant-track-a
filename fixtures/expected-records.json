@@ -1,0 +1,123 @@
+{
+  "customers": [
+    {
+      "customer_id": "HARBOR",
+      "name": "Harbor Design"
+    },
+    {
+      "customer_id": "MAPLE",
+      "name": "Maple Studio"
+    },
+    {
+      "customer_id": "NORTH",
+      "name": "North Workshop"
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "customer_id": "HARBOR",
+      "invoice_number": "INV-100",
+      "amount": "1250.00",
+      "due_date": "2026-09-01"
+    },
+    {
+      "id": 2,
+      "customer_id": "MAPLE",
+      "invoice_number": "INV-200",
+      "amount": "1250.00",
+      "due_date": "2026-09-02"
+    },
+    {
+      "id": 3,
+      "customer_id": "NORTH",
+      "invoice_number": "INV-300",
+      "amount": "19.99",
+      "due_date": "2026-09-03"
+    },
+    {
+      "id": 4,
+      "customer_id": "HARBOR",
+      "invoice_number": "INV-101",
+      "amount": "300.00",
+      "due_date": "2026-09-04"
+    },
+    {
+      "id": 5,
+      "customer_id": "MAPLE",
+      "invoice_number": "INV-201",
+      "amount": "600.00",
+      "due_date": "2026-09-05"
+    },
+    {
+      "id": 6,
+      "customer_id": "NORTH",
+      "invoice_number": "INV-301",
+      "amount": "100.00",
+      "due_date": "2026-09-06"
+    },
+    {
+      "id": 7,
+      "customer_id": "HARBOR",
+      "invoice_number": "KEEP-700",
+      "amount": "456.78",
+      "due_date": "2026-09-09"
+    },
+    {
+      "id": 8,
+      "customer_id": "MAPLE",
+      "invoice_number": "KEEP-700",
+      "amount": "88.20",
+      "due_date": "2026-09-10"
+    },
+    {
+      "id": 9,
+      "customer_id": "NORTH",
+      "invoice_number": "KEEP-702",
+      "amount": "150.00",
+      "due_date": "2026-09-11"
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": "KEEP-P1",
+      "customer_id": "HARBOR",
+      "invoice_number": "KEEP-700",
+      "amount": "56.78",
+      "invoice_id": 7
+    },
+    {
+      "payment_id": "KEEP-P2",
+      "customer_id": "NORTH",
+      "invoice_number": "KEEP-702",
+      "amount": "150.00",
+      "invoice_id": 9
+    },
+    {
+      "payment_id": "KEEP-U1",
+      "customer_id": "MAPLE",
+      "invoice_number": "WAIT-900",
+      "amount": "33.33",
+      "invoice_id": null
+    },
+    {
+      "payment_id": "SEED-1",
+      "customer_id": "HARBOR",
+      "invoice_number": "INV-101",
+      "amount": "300.00",
+      "invoice_id": 4
+    },
+    {
+      "payment_id": "SEED-2",
+      "customer_id": "NORTH",
+      "invoice_number": "INV-300",
+      "amount": "10.00",
+      "invoice_id": 3
+    }
+  ],
+  "summary": {
+    "invoice_count": 9,
+    "open_count": 7,
+    "outstanding": "3698.19"
+  }
+}

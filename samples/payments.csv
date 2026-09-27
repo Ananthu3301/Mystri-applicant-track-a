@@ -1,0 +1,4 @@
+payment_id,customer_id,invoice_number,amount
+PAY-201,MAPLE,INV-200,1250.00
+PAY-301,NORTH,INV-300,9.99
+PAY-404,HARBOR,INV-NOT-FOUND,50.00

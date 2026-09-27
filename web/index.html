@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ClearLedger</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div class="brand">CL</div><div><h1>ClearLedger</h1><p>Invoices, payments and the balance between them.</p></div><span class="tag">Local demo · synthetic data</span></header>
+<main>
+<section class="metrics" aria-label="Overview">
+<article><span>Total invoices</span><strong id="invoice-count">—</strong></article>
+<article><span>Open invoices</span><strong id="open-count">—</strong></article>
+<article><span>Outstanding</span><strong id="outstanding">—</strong></article>
+</section>
+<section class="card">
+<div class="heading"><div><h2>Invoice register</h2><p>Review balances before sharing an export.</p></div><div class="actions"><label>Show <select id="status"><option value="all">All invoices</option><option value="open">Open invoices</option><option value="paid">Paid invoices</option></select></label><a class="button" href="/api/export" download="invoice-balances.csv">Export CSV</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Customer</th><th>Invoice</th><th>Due</th><th class="number">Amount</th><th class="number">Paid</th><th class="number">Balance</th><th>Status</th></tr></thead><tbody id="invoices"></tbody></table></div>
+</section>
+<section class="imports">
+<article class="card"><h2>Import invoices</h2><p>Choose an invoice CSV from the samples folder.</p><form data-kind="invoices"><label>Invoice CSV<input type="file" accept=".csv,text/csv" required></label><button>Import invoices</button><p class="feedback" role="status" aria-live="polite"></p></form></article>
+<article class="card"><h2>Import payments</h2><p>Record payments against their invoice references.</p><form data-kind="payments"><label>Payment CSV<input type="file" accept=".csv,text/csv" required></label><button>Import payments</button><p class="feedback" role="status" aria-live="polite"></p></form></article>
+</section>
+<section class="card"><h2>Unmatched payments</h2><p>Keep unresolved references visible for review.</p><ul id="unmatched"></ul></section>
+<p id="page-error" role="alert"></p>
+</main><footer>All amounts are INR. This is a fictional assessment application.</footer>
+<script src="/app.js"></script></body></html>
